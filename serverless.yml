@@ -1,0 +1,14 @@
+org: phoenix031
+app: api-project1
+service: api-project1
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'
