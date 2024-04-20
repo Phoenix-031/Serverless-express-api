@@ -12,3 +12,15 @@ functions:
     handler: index.handler
     events:
       - httpApi: '*'
+  auth-service-api:
+    handler: auth-service/app.handler
+    events : 
+      - http:
+          path: auth
+          method: ANY
+  user-service-api:
+    handler: user-service/app.handler
+    events :
+      - http:
+          path: user
+          method: ANY
